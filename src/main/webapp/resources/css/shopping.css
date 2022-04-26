@@ -1,0 +1,337 @@
+/*common*/
+.common-size {
+  width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*header*/
+/*header-top*/
+.header-wrap ul > li {
+  float: left;
+}
+
+.header-top-wrap div {
+  display: inline-block;
+}
+
+.header-top-left ul > li {
+  margin-right: 20px;
+}
+
+.header-top-right {
+  float: right;
+}
+
+.header-top-right ul > li {
+  margin-left: 20px;
+}
+
+/*header-middle*/
+.header-middle-wrap {
+  position: relative;
+  text-align: center;
+}
+
+.header-logo {
+  vertical-align: center;
+}
+
+/*header 검색창*/
+.header-search {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid black;
+}
+
+.header-searchBox {
+  border: 0;
+  padding: 8px;
+  line-height: 25px;
+}
+
+.header-search button {
+  border: 0;
+  background-color: white;
+  vertical-align: middle;
+}
+
+/*header 카테고리*/
+.header-bottom-wrap {
+  height: 30px;
+}
+
+.header-search img {
+  width: 30px;
+}
+
+.header-category > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-category-list ul {
+  display: none;
+}
+
+.header-category-list ul > li {
+  clear: left;
+}
+
+.header-category-list:hover ul {
+  display: block;
+}
+
+/*main*/
+/*main 이미지*/
+.main-logo-img {
+  text-align: center;
+}
+
+.main-title-notice-wrap {
+  position: relative;
+  margin-top: 100px;
+}
+
+.main-bestItems-title-wrap {
+  margin-top: 90px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/*main 공지사항*/
+.main-notice-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 365px;
+}
+
+.main-notice-top-right {
+  float: right;
+  font-size: 25px;
+}
+
+.main-notice-bottom {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+/*best items 이미지*/
+.main-img {
+  width: 310px;
+}
+
+.main-bestItems-content-wrap ul > li {
+  padding: 0 20px;
+}
+
+.main-bestItems-content-wrap ul > li {
+  float: left;
+}
+
+/*new items 내용*/
+.main-newItems-title-wrap {
+  text-align: center;
+}
+
+.main-newItems-content {
+  float: left;
+  padding: 0 20px;
+}
+
+/*상품 후기*/
+.main-review-title-wrap {
+  text-align: center;
+}
+
+.main-review-content-img > img {
+  width: 236px;
+}
+
+.main-review-bottom-img > img {
+  width: 40px;
+}
+
+.main-review-bottom {
+  padding: 10px;
+}
+
+.main-review-bottom > li {
+  float: left;
+}
+
+.main-review-bottom-content {
+  padding: 10px;
+}
+
+.main-review-content {
+  float: left;
+  padding: 0 20px;
+}
+
+/*footer*/
+.footer-top-wrap ul > li {
+  float: left;
+  padding: 0 20px;
+}
+
+/*board*/
+/*게시판 목록*/
+.board-list-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.board-list-table tr th {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.board-list-table tr td {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.board-table-number {
+  width: 10%;
+}
+
+.board-table-title {
+  width: 60%;
+}
+
+.board-table-writer {
+  width: 10%;
+}
+
+.board-table-date {
+  width: 10%;
+}
+
+.board-table-counting {
+  width: 10%;
+}
+.board-list-table td {
+  text-align: center;
+}
+/*게시판 검색 / 글쓰기 버튼*/
+.board-bottom-wrap {
+  text-align: center;
+}
+
+.board-search {
+  display: inline-block;
+}
+
+.board-write-button {
+  display: inline-block;
+  float: right;
+}
+
+/*게시판 글쓰기*/
+.board-table {
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.board-write-title {
+  width: 100%;
+  line-height: 50px;
+  font-size: 25px;
+  padding: 0 10px;
+}
+
+.board-write-content {
+  width: 100%;
+  height: 600px;
+  resize: none;
+  font-size: 25px;
+  padding: 10px;
+}
+
+/*게시판 글 내용*/
+.board-content-button-wrap {
+  float: right;
+}
+
+.board-content-table tr th {
+  width: 10%;
+  border: 0;
+  border-bottom: 1px solid black;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.board-content-table tr td {
+  border: 0;
+  border-bottom: 1px solid black;
+  line-height: 40px;
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.board-content-textarea {
+  height: 600px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+/*게시판 글 수정*/
+.board-edit-table {
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.board-edit-button {
+  float: right;
+}
+
+/*회원가입*/
+.join-button {
+  float: right;
+}
+.join-table {
+  width: 70%;
+}
+.join-table tr th {
+  line-height: 40px;
+  font-size: 20px;
+}
+.join-table tr td {
+  line-height: 40px;
+  font-size: 20px;
+}
+.join-table input {
+  line-height: 40px;
+  font-size: 20px
+}
+
+/*로그인*/
+.login-wrap {
+  text-align: center;
+}
+.login-wrap input {
+  line-height: 35px;
+  font-size: 20px;
+}
+.login-button {
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+}
