@@ -19,6 +19,7 @@
         <li><a href="/join">회원가입</a></li>
         <li><a href="/cart">장바구니</a></li>
         <li><a href="/mypage">마이페이지</a></li>
+        <li><a href="/admin">관리자페이지</a></li>
       </ul>
     </div>
     <div class="header-top-right">

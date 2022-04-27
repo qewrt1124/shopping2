@@ -17,19 +17,31 @@
     <table class="join-table">
       <tr>
         <th>아이디</th>
-        <td><input type="text" name="id" id="id" onblur="isId(this)"></td>
+        <td>
+          <input type="text" name="id" id="id" onblur="isId(this.value)">
+          <span id="idAlert"></span>
+        </td>
       </tr>
       <tr>
         <th>비밀번호</th>
-        <td><input type="password" name="pass" id="pass" onblur="isPassword(this)"></td>
+        <td>
+          <input type="password" name="pass" id="pass" onblur="isPassword(this.value)">
+          <span id="passAlert"></span>
+        </td>
       </tr>
       <tr>
         <th>비밀번호확인</th>
-        <td><input type="password" name="pass" id="passConfirm" onblur="passwordConfirm()"></td>
+        <td>
+          <input type="password" name="pass" id="passConfirm" onblur="passwordConfirm()">
+          <span id="passConfirmAlert"></span>
+        </td>
       </tr>
       <tr>
         <th>이름</th>
-        <td><input type="text" name="name" id="name" onblur="isName(this)"></td>
+        <td>
+          <input type="text" name="name" id="name" onblur="isName(this.value)">
+          <span id="nameAlert"></span>
+        </td>
       </tr>
       <tr>
         <th>우편번호</th>
@@ -52,7 +64,7 @@
       </tr>
       <tr>
         <th>연락처</th>
-        <td><input type="tel" name="phNum"></td>
+        <td><input type="tel" name="phNum" onkeyup="test(this.value)"></td>
       </tr>
       <tr>
         <th>이메일</th>

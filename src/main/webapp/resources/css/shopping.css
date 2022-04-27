@@ -225,9 +225,11 @@ ul {
 .board-table-counting {
   width: 10%;
 }
+
 .board-list-table td {
   text-align: center;
 }
+
 /*게시판 검색 / 글쓰기 버튼*/
 .board-bottom-wrap {
   text-align: center;
@@ -297,6 +299,7 @@ ul {
   margin-right: auto;
   margin-left: auto;
 }
+
 .board-edit-button {
   float: right;
 }
@@ -305,17 +308,21 @@ ul {
 .join-button {
   float: right;
 }
+
 .join-table {
   width: 70%;
 }
+
 .join-table tr th {
   line-height: 40px;
   font-size: 20px;
 }
+
 .join-table tr td {
   line-height: 40px;
   font-size: 20px;
 }
+
 .join-table input {
   line-height: 40px;
   font-size: 20px
@@ -325,13 +332,88 @@ ul {
 .login-wrap {
   text-align: center;
 }
+
 .login-wrap input {
   line-height: 35px;
   font-size: 20px;
 }
+
 .login-button {
   background-color: white;
   border: 0;
   cursor: pointer;
   font-size: 18px;
+}
+
+/*admin article*/
+.admin-article-wrap {
+  width: 10%;
+  height: 100%;
+  border: 3px solid red;
+  float: left;
+}
+
+/*제품등록*/
+.productRegister-table {
+  width: 60%;
+  margin: auto;
+}
+
+.productRegister-table tr th {
+  line-height: 40px;
+}
+
+.productRegister-table tr td {
+  line-height: 40px;
+}
+
+.productRegister-table select {
+  height: 30px;
+}
+
+.productRegister-table option {
+  height: 30px;
+}
+
+.productRegister-table input {
+  line-height: 25px;
+}
+
+.productRegister-table button {
+  float: right;
+}
+
+/**/
+.product-list-wrap {
+  text-align: center;
+}
+
+.product-list-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 80%;
+  margin: auto;
+}
+
+.product-list-table tr th {
+  line-height: 40px;
+  font-size: 20px;
+  border: 1px solid black;
+}
+
+.product-list-table tr td {
+  line-height: 40px;
+  font-size: 20px;
+  border: 1px solid black;
+}
+.product-list-button-wrap {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.product-list-search-wrap {
+  display: inline-block;
+}
+#productRegister-button {
+  float: right;
 }
