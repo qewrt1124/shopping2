@@ -15,6 +15,7 @@
 <%--제품등록 wrap--%>
 <form name="productForm" id="productForm" method="post" enctype="multipart/form-data" onsubmit="return false">
   <div class="productRegister-wrap common-size">
+    <form>
     <table class="productRegister-table">
       <tr>
         <th>카테고리</th>
@@ -56,14 +57,15 @@
       </tr>
       <tr>
         <th>제품이미지</th>
-        <td><input type="file" name="productimg" id="productImg" ></td>
+        <td><input type="file" name="productimg" id="productImg"></td>
       </tr>
       <tr>
         <td colspan="2">
-          <button type="button" onclick="nullCheck()">등록</button>
+          <button type="submit">등록</button>
         </td>
       </tr>
     </table>
+    </form>
   </div>
 </form>
 

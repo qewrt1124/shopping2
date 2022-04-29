@@ -58,7 +58,7 @@ function passwordConfirm() {
 
 /*이름 체크*/
 function isName(asValue) {
-  let regExp = /^[a-zA-Z가-힣][a-zA-Z가-힣 ]*$/;
+  let regExp = /^[a-zA-Z가-힣][a-zA-Z가-힣]*$/;
   let inputSpace = document.getElementById("name");
   let alertSpace = document.getElementById("nameAlert");
 
@@ -146,6 +146,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
   document.form.roadAddrPart2.value = roadAddrPart2;
   document.form.addrDetail.value = addrDetail;
   document.form.zipNo.value = zipNo;
+  alert("아test");
 }
 
 /*제품등록 카테고리*/

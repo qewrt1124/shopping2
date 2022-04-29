@@ -383,7 +383,11 @@ ul {
   float: right;
 }
 
-/**/
+.productRegister-table ul {
+  display: inline-block;
+}
+
+/*게시판 리스트*/
 .product-list-wrap {
   text-align: center;
 }
@@ -406,14 +410,17 @@ ul {
   font-size: 20px;
   border: 1px solid black;
 }
+
 .product-list-button-wrap {
   width: 80%;
   margin: auto;
   text-align: center;
 }
+
 .product-list-search-wrap {
   display: inline-block;
 }
+
 #productRegister-button {
   float: right;
 }

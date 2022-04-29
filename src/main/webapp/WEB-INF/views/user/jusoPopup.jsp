@@ -50,11 +50,11 @@
 function init(){
 	var url = location.href;
 	var confmKey = "승인키";
-	var resultType = "4"; // 도로명주소 검색결과 화면 출력내용, 1 : 도로명, 2 : 도로명+지번+상세보기(관련지번, 관할주민센터), 3 : 도로명+상세보기(상세건물명), 4 : 도로명+지번+상세보기(관련지번, 관할주민센터, 상세건물명)
+	var resultType = "3"; // 도로명주소 검색결과 화면 출력내용, 1 : 도로명, 2 : 도로명+지번+상세보기(관련지번, 관할주민센터), 3 : 도로명+상세보기(상세건물명), 4 : 도로명+지번+상세보기(관련지번, 관할주민센터, 상세건물명)
 	var inputYn= "<%=inputYn%>";
 	if(inputYn != "Y"){
 		document.form.confmKey.value = "U01TX0FVVEgyMDIyMDQyNjE5MDIwOTExMjUwODc=";
-		document.form.returnUrl.value = "http://localhost/join";
+		document.form.returnUrl.value = "http://localhost/join";  // 여기에 어떤거 url 입력해야되나요?
 		document.form.resultType.value = 3;
 		document.form.action="https://www.juso.go.kr/addrlink/addrLinkUrl.do"; //인터넷망
 		//document.form.action="https://www.juso.go.kr/addrlink/addrMobileLinkUrl.do"; //모바일 웹인 경우, 인터넷망

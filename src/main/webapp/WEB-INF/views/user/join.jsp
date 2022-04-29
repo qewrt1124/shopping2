@@ -13,7 +13,7 @@
 </header>
 
 <div class="common-size join-wrap">
-<%--  <form action="/join" method="post">--%>
+  <form action="/join" method="post">
     <table class="join-table">
       <tr>
         <th>아이디</th>
@@ -32,14 +32,14 @@
       <tr>
         <th>비밀번호확인</th>
         <td>
-          <input type="password" name="pass" id="passConfirm" onblur="passwordConfirm()">
+          <input type="password" name="passConfirm" id="passConfirm" onblur="passwordConfirm()">
           <span id="passConfirmAlert"></span>
         </td>
       </tr>
       <tr>
         <th>이름</th>
         <td>
-          <input type="text" name="name" id="name" onblur="isName(this.value)">
+          <input type="text" name="userName" id="name" onblur="isName(this.value)">
           <span id="nameAlert"></span>
         </td>
       </tr>
@@ -48,23 +48,23 @@
         <td>
           <input type="hidden" id="confmKey" name="confmKey" value="U01TX0FVVEgyMDIyMDQyNjE5MDIwOTExMjUwODc="  >
           <input type="text" id="zipNo" name="zipNo" readonly style="width:100px">
-          <input type="button" value="주소검색">
+          <input type="button" value="주소검색" onclick="goPopup()">
         </td>
       </tr>
       <tr>
         <th>도로명주소</th>
-        <td><input type="text" id="roadAddrPart1" style="width:85%"></td>
+        <td><input type="text" id="roadAddrPart1" name="roadAddrPart1" style="width:85%"></td>
       </tr>
       <tr>
         <th>상세주소</th>
         <td>
-          <input type="text" id="addrDetail" style="width:40%" value="">
-          <input type="text" id="roadAddrPart2"  style="width:40%" value="">
+          <input type="text" id="addrDetail" name="addrDetail" style="width:40%">
+          <input type="text" id="roadAddrPart2" name="roadAddrPart2" style="width:40%">
         </td>
       </tr>
       <tr>
         <th>연락처</th>
-        <td><input type="tel" name="phNum" onkeyup="test(this.value)"></td>
+        <td><input type="tel" name="phNum"></td>
       </tr>
       <tr>
         <th>이메일</th>
@@ -73,12 +73,12 @@
       <tr>
         <td colspan="2">
           <div class="join-button">
-            <button type="submit" onclick="endCheck()">가입완료</button>
+            <button type="submit">가입완료</button>
           </div>
         </td>
       </tr>
     </table>
-<%--  </form>--%>
+  </form>
 </div>
 
 <footer class="common-size">
