@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
   <title>Title</title>
@@ -24,13 +25,15 @@
       <th class="board-table-date">등록일자</th>
       <th class="board-table-counting">조회수</th>
     </tr>
+    <c:forEach var="boardList" items="${boardList}">
     <tr>
-      <td>번호</td>
-      <td><a href="/boardContent">제목</a></td>
-      <td>작성자</td>
-      <td>등록일자</td>
+      <td>${boardList.bid}</td>
+      <td>${boardList.title}</td>
+      <td>${boardList.bwriter}</td>
+      <td>${boardList.writeDate}</td>
       <td>조회수</td>
     </tr>
+    </c:forEach>
   </table>
   <div class="board-bottom-wrap">
     <%--게시판 검색창--%>
@@ -43,10 +46,20 @@
       <input type="text" id="search-content" name="searchData">
       <button type="submit">찾기</button>
     </div>
+      <%--게시판 페이지 번호--%>
+<%--      <div class="board-page-number">--%>
+<%--        <c:forEach var="i" begin="${paging.startPage}" end="${paging.startPage + 4}">--%>
+<%--          <a href="/boardList/${boardList.category}/${1}">--%>
+<%--            <input class="page-number" type="button" value="${i}">--%>
+<%--          </a>--%>
+<%--        </c:forEach>--%>
+<%--      </div>--%>
     <%--게시판 글쓰기--%>
-    <div class="board-write-button">
-      <button type="button"><a href="/boardWrite">글쓰기</a></button>
-    </div>
+      <c:if test="${adminLevel == 3 || adminLevel == 2}">
+        <div class="board-write-button">
+          <button type="button"><a href="/boardWrite">글쓰기</a></button>
+        </div>
+      </c:if>
   </div>
 </div>
 <footer class="common-size">

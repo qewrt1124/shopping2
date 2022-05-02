@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: qewrt
-  Date: 2022-04-23
-  Time: 오후 8:22
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <body>
 <%--header wrap--%>
@@ -15,7 +9,14 @@
     <%--로그인/회원가입/장바구니/마이페이지 (left)--%>
     <div class="header-top-left">
       <ul>
-        <li><a href="/login">로그인</a></li>
+        <c:choose>
+          <c:when test="${userId == null}">
+            <li><a href="/login">로그인</a></li>
+          </c:when>
+          <c:otherwise>
+            <li><a href="/logout" id="logout">로그아웃</a></li>
+          </c:otherwise>
+        </c:choose>
         <li><a href="/join">회원가입</a></li>
         <li><a href="/cart">장바구니</a></li>
         <li><a href="/mypage">마이페이지</a></li>
@@ -25,7 +26,7 @@
     <div class="header-top-right">
     <%--공지사항/이벤트/상품문의/상품후기 (right)--%>
       <ul>
-        <li><a href="/boardList">공지사항</a></li>
+        <li><a href="/boardList/notice">공지사항</a></li>
         <li><a href="/event">이벤트</a></li>
         <li><a href="/inquiry">상품문의</a></li>
         <li><a href="/review">상품후기</a></li>

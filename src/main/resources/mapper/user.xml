@@ -8,6 +8,16 @@
   <!--회원가입-->
   <insert id="join" parameterType="com.spring.shopping.dto.MemberDto">
     insert into user
-    VALUES (null, #{userName}, #{id}, #{pass}, #{email}, #{address}, #{phNum}, 'bronze', 'normal', now())
+    VALUES (null, #{userName}, #{id}, #{pass}, #{email}, #{address}, #{phNum}, 'bronze', '1', now())
   </insert>
+
+  <!--User Info-->
+  <select id="userInfo" resultType="Map">
+    select * from user
+  </select>
+
+  <!--Login Check-->
+  <select id="loginCheck" parameterType="com.spring.shopping.dto.MemberDto" resultType="String">
+    select id from user where id = #{id} and pass = #{pass}
+  </select>
 </mapper>

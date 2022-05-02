@@ -4,6 +4,8 @@ function BoardContentReset() {
   target.value = "";
 }
 
+/*회원가입*/
+
 /*아이디 체크*/
 function isId(asValue) {
   let regExp = /^[a-z]+[a-z0-9]{5,19}$/g;
@@ -128,18 +130,18 @@ function endCheck() {
 // }
 
 /*도로명 주소*/
-function goPopup(){
+function goPopup() {
 //경로는 시스템에 맞게 수정하여 사용
 //호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(https://www.juso.go.kr/addrlink/addrLinkUrl.do)를
 //호출하게 됩니다.
-  let pop = window.open("/jusoPopup","pop","width=570,height=420, scrollbars=yes, resizable=yes");
+  let pop = window.open("/jusoPopup", "pop", "width=570,height=420, scrollbars=yes, resizable=yes");
 //** 2017년 5월 모바일용 팝업 API 기능 추가제공 **/
 // 모바일 웹인 경우, 호출된 페이지(jusopopup.jsp)에서
 // 실제 주소검색 URL(https://www.juso.go.kr/addrlink/addrMobileLinkUrl.do)를 호출하게 됩니다.
 // var pop = window.open("/popup/jusoPopup.jsp","pop","scrollbars=yes, resizable=yes");
 }
 
-function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAddr, jibunAddr, zipNo){
+function jusoCallBack(roadFullAddr, roadAddrPart1, addrDetail, roadAddrPart2, engAddr, jibunAddr, zipNo) {
   // 2017년 2월 제공항목이 추가되었습니다. 원하시는 항목을 추가하여 사용하시면 됩니다.
   document.form.roadFullAddr.value = roadFullAddr;
   document.form.roadAddrPart1.value = roadAddrPart1;
@@ -150,6 +152,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 }
 
 /*제품등록 카테고리*/
+
 /*메뉴 카테고리*/
 function menuCategory(e) {
   let top = new Map();
@@ -221,7 +224,7 @@ function nullCheck() {
     size.focus();
     size.style.border = "2px solid red";
     return false;
-  }  else if (quantity.value === "" || positiveNumber(quantity.value) === true) {
+  } else if (quantity.value === "" || positiveNumber(quantity.value) === true) {
     quantity.focus();
     quantity.style.border = "2px solid red";
     return false;
@@ -243,4 +246,47 @@ function positiveNumber(e) {
     return false;
   }
   return true;
+}
+
+/*로그인*/
+
+/*Login id/pass check*/
+function loginCheck() {
+  let id = $('#id').val();
+  let pass = $('#pass').val();
+  let sendData = {'id': id, 'pass': pass};
+
+  $.ajax({
+    method: 'POST',
+    url: '/loginCheck',
+    data: JSON.stringify(sendData),
+    contentType: 'application/json',
+    success: (resp) => {
+      if (resp === 'fail') {
+        console.log('아이디랑 안 맞음');
+      } else {
+        location.href = '/';
+      }
+    }
+  }).fail(() => {
+    console.log('fail');
+  });
+}
+
+/*로그인에서 엔터키 누르면 작동*/
+function enterKey() {
+  $('.login-wrap').keypress((e) => {
+    if (e.keyCode === 13) {
+      loginCheck();
+    }
+  });
+}
+
+/*로그아웃*/
+function logout() {
+  $.ajax({
+    method: 'POST',
+    url: '/logout'
+
+  })
 }

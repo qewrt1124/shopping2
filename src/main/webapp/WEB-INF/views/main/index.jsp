@@ -36,7 +36,7 @@
         </a>
         <%--공지사항 제목--%>
         <ul class="main-notice-bottom">
-          <li>Cs관련</li>
+          <li>${userId}</li>
           <li>Cs관련</li>
           <li>Cs관련</li>
           <li>Cs관련</li>
